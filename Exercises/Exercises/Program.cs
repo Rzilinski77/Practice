@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Reflection.Emit;
+using System.Runtime.CompilerServices;
+using System.Transactions;
 
 namespace Exercises
 {
@@ -6,87 +11,256 @@ namespace Exercises
     {
         static void Main(string[] args)
         {
-            #region Excercise 1
+            #region Excercise 1 √
             // Prompt the user to enter a string. After the user enters a string, output the same string back to
             //the console.
+
+            //Console.WriteLine("Enter in a string");
+            //string input = Console.ReadLine();
+            //Console.WriteLine($"{input}");
+
             #endregion
 
-            #region Excercise 2
+            #region Excercise 2 √
             //Prompt the user to enter a number. After the user enters a number, add 1 to the number and
             //output it back to the console.
+
+            //Console.WriteLine("enter a number");
+            //int input = int.Parse(Console.ReadLine()) + 1;
+            //Console.WriteLine(input);
+
+
             #endregion
 
-            #region Excercise 3
+            #region Excercise 3 √
             // Prompt the user to enter a number. After the user enters a number, add .5 to the number and
             //output it back to the console.
 
+            //Console.WriteLine("Enter a number");
+            //double input = double.Parse(Console.ReadLine()) + .5;
+            //Console.WriteLine($"Your new number is {input}");
+
+
             #endregion
 
-            #region Excercise 4
+            #region Excercise 4 √
             // Prompt the user to enter two numbers. After the user enters the numbers, add them together
             //and output the sum back to the console.
 
+            //Console.WriteLine("Enter two numbers");
+            //int one = int.Parse(Console.ReadLine());
+            //int two = int.Parse(Console.ReadLine());
+            //int sum = one + two;
+            //Console.WriteLine(sum);
+
             #endregion
 
-            #region Excercise 5
+            #region Excercise 5 √
             // Prompt the user to enter two numbers. After the user enters the numbers, multiply them and
             //output the product back to the console.
+
+            //Console.WriteLine("Enter two numbers");
+            //int one = int.Parse(Console.ReadLine());
+            //int two = int.Parse(Console.ReadLine());
+            //int product = one * two;
+            //Console.WriteLine(product);
+
             #endregion
 
-            #region Excercise 6
+            #region Excercise 6 √
             // Use a do-while loop to output "Hello, World!" in a loop. Each time you output "Hello, World!"
             //ask the user whether they would like to continue.
 
+            //string more = "y";
+
+            //do
+            //{
+            //    Console.WriteLine("Hello, World!");
+            //    Console.WriteLine("Would you like to continue? (y/n)");
+            //    more = Console.ReadLine();
+
+            //} while (more == "y");
+
+
+
             #endregion
 
-            #region Excercise 7
+            #region Excercise 7 √
             // Use a do-while loop to run exercise 1 in a loop. Each time you run the code ask the user
             //whether they would like to continue.
+
+            //string more = "y";
+
+            //do
+            //{
+            //    Console.WriteLine("Enter in a string");
+            //    string input = Console.ReadLine();
+            //    Console.WriteLine($"{input}");
+            //    Console.WriteLine("Would you like to continue? (y/n)");
+            //    more = Console.ReadLine();
+            //} while (more == "y");
+
             #endregion
 
-            #region Excercise 8
+            #region Excercise 8 √
             // Make exercises 2-5 run in a loop. Use a do-while loop to run the code in a loop. Each time you
             //run the code ask the user whether they would like to continue.
+
+            //string more = "y";
+
+            //do
+            //{
+            //    Console.WriteLine("enter a number");
+            //    int input = int.Parse(Console.ReadLine()) + 1;
+            //    Console.WriteLine(input);
+            //    Console.WriteLine("Would you like to continue? (y/n)");
+            //    more = Console.ReadLine();
+
+            //} while (more == "y");
+
+            //more = "y";
+
+            //do
+            //{
+            //    Console.WriteLine("Enter a number");
+            //    double input = double.Parse(Console.ReadLine()) + .5;
+            //    Console.WriteLine($"Your new number is {input}");
+            //    Console.WriteLine("Would you like to continue? (y/n)");
+            //    more = Console.ReadLine();
+
+            //} while (more == "y");
+
+            //more = "y";
+
+            //do
+            //{
+            //    Console.WriteLine("Enter two numbers");
+            //    int one = int.Parse(Console.ReadLine());
+            //    int two = int.Parse(Console.ReadLine());
+            //    int sum = one + two;
+            //    Console.WriteLine(sum);
+            //    Console.WriteLine("Would you like to continue? (y/n)");
+            //    more = Console.ReadLine();
+
+            //} while (more == "y");
+
+            //more = "y";
+
+            //do
+            //{
+            //    Console.WriteLine("Enter two numbers");
+            //    int won = int.Parse(Console.ReadLine());
+            //    int too = int.Parse(Console.ReadLine());
+            //    int product = won * too;
+            //    Console.WriteLine(product);
+            //    Console.WriteLine("Would you like to continue? (y/n)");
+            //    more = Console.ReadLine();
+
+            //} while (more == "y");
             #endregion
 
-            #region Excercise 9
+            #region Excercise 9 √
             // Prompt the user to enter a language. Based on the language the user input, display "Hello,
             //World!" in that language. Use a switch statement to choose what to display.
+
+            //Console.WriteLine("enter a language (english/spanish/french)");
+            //string language = Console.ReadLine().ToLower();
+
+            //switch (language)
+            //{
+            //    case "english":
+            //        Console.WriteLine("Hello!");
+            //        break;
+            //    case "spanish":
+            //        Console.WriteLine("Hola!");
+            //        break;
+            //    case "french":
+            //        Console.WriteLine("Bonjour");
+            //        break;
+            //}
             #endregion
 
-            #region Excercise 10
+            #region Excercise 10 √
             // Determine whether the user is tall enough to ride a roller coaster. Prompt the user to enter
-            //her height in inches.If she is less than 54 inches tall, notify her that she cannot ride the
-            //Raptor.If she is at least 54 inches tall, notify her that she can ride the Raptor.
+            //her height in inches. If she is less than 54 inches tall, notify her that she cannot ride the
+            //Raptor. If she is at least 54 inches tall, notify her that she can ride the Raptor.
+
+            //Console.WriteLine("What is your height? (in inches)");
+            //int height = int.Parse(Console.ReadLine());
+
+            //if (height >= 54)
+            //{
+            //    Console.WriteLine("You can ride the Raptor!");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("I'm sorry, you cannot ride the raptor");
+            //}
 
             #endregion
 
-            #region Excercise 11
+            #region Excercise 11 √
             // Use a for loop to output all the numbers from 0 to 9.
+
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
             #endregion
 
-            #region Excercise 12
+            #region Excercise 12 √
             // Output all the numbers from 9 to 0. Use a for loop to output all the numbers from 9 to 0
+
+            //for (int i = 9; i >= 0; i--)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
             #endregion
 
-            #region Excercise 13
+            #region Excercise 13 √
             // Prompt the user for a number. Use a for loop to output all the numbers from that number to
             //0.
 
+            //Console.WriteLine("Enter a number");
+            //int input = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Countdown");
+            //for (int i = input; i >= 0; i--)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+            //DO LAB 2
             #endregion
 
-            #region Excercise 14
+            #region Excercise 14 √
             // Prompt the user for a number. Use a for loop to output the squares of all the numbers from 1
             //to that number.
+
+            //Console.Write("Enter a number:");
+            //int input = int.Parse(Console.ReadLine());
+
+            //for (int i = 1; i <= input; i++)
+            //{
+            //    Console.WriteLine(i * i);
+            //}
             #endregion
 
-            #region Excercise 15
+            #region Excercise 15 √
             // Prompt the user for a number. Use a for loop to output the cubes of all the numbers from 1 to
             //that number.
 
+            //Console.Write("Enter a number:");
+            //int input = int.Parse(Console.ReadLine());
+
+            //for (int i = 1; i <= input; i++)
+            //{
+            //    Console.WriteLine(i * i * i);
+            //}
             #endregion
 
-            #region Excercise 16
+            #region Excercise 16 √
             // Use a for loop to output a triangle of asterisks with a height of ten.
             //*
             //**
@@ -99,6 +273,12 @@ namespace Exercises
             //*********
             //**********
 
+            //string star = "*";
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    Console.WriteLine(star);
+            //    star = star + "*";
+            //}
             #endregion
 
             #region Excercise 17
@@ -113,29 +293,83 @@ namespace Exercises
             //  * * * * * * * *
             // * * * * * * * * *
             //* * * * * * * * * *
+
+            //string star = "         *";
+
+            //for (int i = 0; i < 9; i++)
+            //{
+            //    Console.WriteLine(star);
+            //    star = star + " *";
+            //}
+
+
             #endregion
 
-            #region Excercise 18
+            #region Excercise 18 √
+
             // Prompt the user to enter a number. Use a for-loop to calculate the sum of all the numbers
             //from 1 to the number entered.
 
+            //Console.WriteLine("Enter a number");
+            //int input = int.Parse(Console.ReadLine());
+            //int sum = 0;
+            //for (int i = 0; i <= input; i++)
+            //{
+            //    sum += i;
+            //}
+            //Console.WriteLine(sum);
+
+
             #endregion
 
-            #region Excercise 19
+            #region Excercise 19 √
             // Prompt the user to enter two numbers. Use a for-loop to calculate the sum of all the numbers
             //from the first number entered to the second.
 
+            //Console.WriteLine("Enter two numbers");
+            //int inputOne = int.Parse(Console.ReadLine());
+            //int inputTwo = int.Parse(Console.ReadLine());
+            //int sum = 0;
+
+            //if (inputOne < inputTwo)
+            //{
+            //    for (int i = inputOne; i <= inputTwo; i++)
+            //    {
+            //        sum += i;
+            //    }
+            //}
+            //else
+            //{
+            //    for (int i = inputTwo; i <= inputOne; i++)
+            //    {
+            //        sum += i;
+            //    }
+            //}
+            //Console.WriteLine(sum);
+
+
             #endregion
 
-            #region Excercise 20
+            #region Excercise 20 √
             // Prompt the user to enter a number. Use a for-loop to calculate the product of the number
             //and the two preceding numbers.
+
+            //Console.WriteLine("Enter a number");
+            //int input = int.Parse(Console.ReadLine());
+            //int sum = 0;
+            //for (int i = 0; i <= input; i++)
+            //{
+            //    sum += i;
+            //}
+            //Console.WriteLine(sum);
 
             #endregion
 
             #region Excercise 21
             // Prompt the user to enter a series of words. Once the user is done entering the words, output
             //a sentence containing all the words
+
+            //DO LAB 4
             #endregion
 
             #region Excercise 22
@@ -151,6 +385,8 @@ namespace Exercises
 
             #region Excercise 24
             // Prompt the user to enter a string. Extract and output the last ten characters of the string.
+
+            //DO LAB 5
             #endregion
 
             #region Excercise 25
@@ -168,6 +404,8 @@ namespace Exercises
 
             #region Excercise 28
             // Prompt the user to enter text. Remove all the vowels and output the text.
+
+            //DO LAB 6
             #endregion
 
             #region Excercise 29
@@ -182,6 +420,9 @@ namespace Exercises
             #region Excercise 31
             // Create an array of size 5 and fill it with the following numbers: 2, 8, 0, 24, 51. Prompt the user
             //to enter an index. Display the element in the array at that index.
+
+
+            //DO LAB 7
 
             #endregion
 
@@ -209,6 +450,8 @@ namespace Exercises
             //the word, and the second will specify a letter in that word. Display the corresponding word
             //and letter.
 
+
+            //DO LAB 8
             #endregion
 
             #region Excercise 36
@@ -233,6 +476,8 @@ namespace Exercises
             #region Excercise 39
             // Prompt the user to enter five numbers. Store these numbers in an array and output them in
             //ascending order.
+
+            //DO LAB 9
             #endregion
 
             #region Excercise 40
@@ -290,6 +535,8 @@ namespace Exercises
             // Prompt the user to enter as many numbers as she wants. Store these numbers in a list and
             //output their sum.
 
+            //DO LAB 10
+
             #endregion
 
             #region Excercise 49
@@ -310,6 +557,7 @@ namespace Exercises
             // Prompt the user to enter data for a collection of shapes. Display aggregate information about
             //the shapes.
 
+            //DO LAB 11
             #endregion
 
             #region Excercise 53
@@ -332,6 +580,8 @@ namespace Exercises
 
             #region Excercise 56
             // Here's a short guide to help you get started on Lab 11. Start with the Student class. Create all the properties including name and address. Then create the Staff class with all the properties including name and address.Once you have completed both classes examine them and note what is different and what is similar.Take the similar components and move them into a base class. This process should be just like extracting the Shape class.
+
+            //DO LAB 12
             #endregion
 
             #region Excercise 57
