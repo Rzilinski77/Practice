@@ -604,24 +604,76 @@ namespace Exercises
 
             #endregion
 
-            #region Excercise 34
+            #region Excercise 34 √
             // Create an array of size 5 and fill it with the following numbers: 16, 32, 64, 128, 256. Prompt the
             //user to enter a command, 'half' or 'double'.If the user enters 'half', half all the elements in the
             //array.If the user enters 'double', double all the elements in the array.
 
+            //int[] intArray = { 2, 8, 0, 24, 51 };
+            //string cont = "go";
+            //do
+            //{
+            //    foreach (int number in intArray)
+            //    {
+            //        Console.Write($"{number} ");
+            //    }
+
+            //    Console.WriteLine("\n");
+            //    Console.WriteLine("Enter a command: half or double, type STOP to close the program");
+            //    string choice = Console.ReadLine().ToLower();
+            //    if (choice == "half")
+            //    {
+            //        for (int i = 0; i < intArray.Length; i++)
+            //        {
+            //            intArray[i] = intArray[i] / 2;
+            //        }
+            //    }
+            //    else if (choice == "double")
+            //    {
+            //        for (int i = 0; i < intArray.Length; i++)
+            //        {
+            //            intArray[i] = intArray[i] * 2;
+            //        }
+            //    }
+            //    else if (choice == "stop")
+            //    {
+            //        cont = "stop";
+            //    }
+            //} while (cont == "go");
             #endregion
 
-            #region Excercise 35
+            #region Excercise 35 √
             // Create an array of size 5 and fill it with the following strings: "cow", "elephant", "jaguar", "horse",
             //"crow".Prompt the user to enter two indices separated by a space. The first index will specify
             //the word, and the second will specify a letter in that word. Display the corresponding word
             //and letter.
+
+            //string[] animals = { "cow", "elephant", "jaguar", "horse", "crow" };
+            //Console.WriteLine("Pick two numbers from 0-4 seperated by a space. ex (1 4)");
+            //string choice = Console.ReadLine();
+            //string[] choices = choice.Split(" ");
+            //try
+            //{
+            //    int wordIndex = int.Parse(choices[0]);
+            //    int letterIndex = int.Parse(choices[1]);
+            //    string animalChoice = animals[wordIndex];
+            //    char letterChoice = animalChoice[letterIndex];
+            //    Console.WriteLine($"Your animal is {animalChoice}, and your letter is {letterChoice}");
+            //} 
+            //catch (IndexOutOfRangeException ex)
+            //{
+            //    Console.WriteLine("You picked an index too far because the words is too small");
+            //}
+
+
 
 
             //DO LAB 8
             #endregion
 
             #region Excercise 36
+            //DO LAB 8
+
             // Create two arrays, each of size 5. Fill the first array with the numbers: 12, 11, 10, 9, 8. Fill the
             //second array with the strings: "Drummers Drumming", "Pipers Piping", "Lords a-Leaping",
             //"Ladies Dancing", "Maids a-Milking".Combine both arrays to display a piece of the Christmas
