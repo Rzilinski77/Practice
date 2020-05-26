@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection.Emit;
+using System.Reflection.Metadata;
+using System.Reflection.PortableExecutable;
 using System.Runtime.CompilerServices;
 using System.Transactions;
 
@@ -11,6 +13,8 @@ namespace Exercises
     {
         static void Main(string[] args)
         {
+            Methods methods = new Methods();
+
             #region Excercise 1 √
             // Prompt the user to enter a string. After the user enters a string, output the same string back to
             //the console.
@@ -231,7 +235,6 @@ namespace Exercises
             //    Console.WriteLine(i);
             //}
 
-            //DO LAB 2
             #endregion
 
             #region Excercise 14 √
@@ -281,7 +284,7 @@ namespace Exercises
             //}
             #endregion
 
-            #region Excercise 17
+            #region Excercise 17 √
             // Use a for loop to output a triangle of asterisks with a height of ten.
             //         *
             //        * * 
@@ -294,14 +297,18 @@ namespace Exercises
             // * * * * * * * * *
             //* * * * * * * * * *
 
-            //string star = "         *";
-
-            //for (int i = 0; i < 9; i++)
+            //for (int i = 0; i < 10; i++)
             //{
-            //    Console.WriteLine(star);
-            //    star = star + " *";
+            //    for (int j = 0; j < 9-i; j++)
+            //    {
+            //        Console.Write(" ");
+            //    }
+            //    for (int k = 0; k < i+1; k++)
+            //    {
+            //        Console.Write("* ");
+            //    }
+            //    Console.WriteLine();
             //}
-
 
             #endregion
 
@@ -365,75 +372,235 @@ namespace Exercises
 
             #endregion
 
-            #region Excercise 21
+            #region Excercise 21 √
             // Prompt the user to enter a series of words. Once the user is done entering the words, output
             //a sentence containing all the words
 
-            //DO LAB 4
+            //List<String> sentence = new List<String>();
+            //string more = "y";
+
+            //do
+            //{
+            //    Console.WriteLine("Please enter a word");
+            //    string awnser = Console.ReadLine();
+            //    sentence.Add(awnser);
+            //    Console.WriteLine("Do you want to add another word? (y/n)");
+            //    more = methods.YesOrNoValidation(Console.ReadLine());
+            //} while (more == "y");
+
+            //foreach (string word in sentence)
+            //{
+            //    Console.Write($"{word} ");
+            //}
+
             #endregion
 
-            #region Excercise 22
+            #region Excercise 22 √
             // Prompt the user to enter two numbers that will determine a range. Then prompt the user to
             //enter another number and check if it is in the range.
 
+            //string more = "y";
+
+            //do
+            //{
+            //    Console.WriteLine("Enter two numbers");
+            //    int numOne = int.Parse(Console.ReadLine());
+            //    int numTwo = int.Parse(Console.ReadLine());
+            //    Console.WriteLine("Enter another number, and we'll check if it's in range of the other numbers");
+            //    int numThree = int.Parse(Console.ReadLine());
+
+            //    if (numOne < numTwo)
+            //    {
+            //        if (numThree > numOne && numThree < numTwo)
+            //        {
+            //            Console.WriteLine($"{numThree} is in Range of {numOne} and {numTwo}!");
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine($"{numThree} is not in Range of {numOne} and {numTwo}!");
+            //        }
+            //    }
+            //    else
+            //    {
+            //        if (numThree > numTwo && numThree < numOne)
+            //        {
+            //            Console.WriteLine($"{numThree} is in Range of {numTwo} and {numOne}!");
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine($"{numThree} is not in Range of {numTwo} and {numOne}!");
+            //        }
+            //    }
+
+            //    Console.WriteLine("Do you want to continue? (y/n)");
+            //    more = methods.YesOrNoValidation(Console.ReadLine());
+
+            //} while (more == "y");
+
+            //Console.WriteLine("Goodbye!");
             #endregion
 
-            #region Excercise 23
+            #region Excercise 23 √
             // Prompt the user to enter a string. Extract and output the first ten characters of the string.
 
+            //Console.WriteLine("Enter in a string");
+            //string word = Console.ReadLine();
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    Console.WriteLine(word[i]);
+            //}
+
             #endregion
 
-            #region Excercise 24
+            #region Excercise 24 √
             // Prompt the user to enter a string. Extract and output the last ten characters of the string.
 
-            //DO LAB 5
+            //Console.WriteLine("Enter in a string");
+            //string word = Console.ReadLine();
+            //for (int i = word.Length-10; i <= word.Length; i++)
+            //{
+            //    Console.WriteLine(word[i]);
+            //}
             #endregion
 
-            #region Excercise 25
+            #region Excercise 25 √
             // Prompt the user to enter a sentence. Split the sentence into individual words and display each
             //word on its own line.
+
+            //Console.WriteLine("Enter a sentence");
+            //string sentence = Console.ReadLine();
+            //String[] sentenceArray = sentence.Split(" ", sentence.Length);
+            //foreach (string word in sentenceArray)
+            //{
+            //    Console.WriteLine(word);
+            //}
+
             #endregion
 
-            #region Excercise 26
+            #region Excercise 26 √
             // Prompt the user to enter text. Count and output how many vowels were in the string
+
+            //Console.WriteLine("Enter some text");
+            //string text = Console.ReadLine();
+            //int vowels = 0;
+            //foreach (char character in text)
+            //{
+            //    if (character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u' )
+            //    {
+            //        vowels++;
+            //    }
+            //}
+            //Console.WriteLine($"There are {vowels} vowels in your sentence");
+
             #endregion
 
-            #region Excercise 27
+            #region Excercise 27 √ Try again with Linq
             // Prompt the user to enter text. Count and output how many consonants were in the string
+
+            //Console.WriteLine("Enter some text");
+            //string text = Console.ReadLine().ToLower();
+            //int consonants = 0;
+            //foreach (char character in text)
+            //{
+            //    if (character != 'a' && character != 'e' && character != 'i' && character != 'o' && character != 'u')
+            //    {
+            //        consonants++;
+            //    }
+            //}
+            //Console.WriteLine($"There are {consonants} consonants in your sentence");
             #endregion
 
-            #region Excercise 28
+            #region Excercise 28 √ Try again with Linq
             // Prompt the user to enter text. Remove all the vowels and output the text.
 
-            //DO LAB 6
+            //Console.WriteLine("Enter some text");
+            //string text = Console.ReadLine();
+
+            //foreach (char character in text)
+            //{
+            //    if (character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u')
+            //    {
+            //        text= text.Replace(character, ' ');
+            //        text = text.Replace(" ", String.Empty);
+            //    }
+            //}
+            //Console.WriteLine(text);
             #endregion
 
-            #region Excercise 29
+            #region Excercise 29 Maybe try something with Regex?
             // Prompt the user to enter text. Remove all the vowels in the middle of the word, but leave any
             //that start or end the word.
+
+            //Console.WriteLine("Enter some text");
+            //string text = Console.ReadLine();
+
+            //for (int i = 1; i < text.Length - 2; i++)
+            //{
+            //    if (text[i] == 'a' || text[i] == 'e' || text[i] == 'i' || text[i] == 'o' || text[i] == 'u')
+            //    {
+            //        text = text.Replace(text[i], ' ');
+            //    }
+            //}
+            //foreach (Char character in text)
+            //{
+            //    text = text.Replace(" ", String.Empty);
+            //}
+            //Console.WriteLine(text);
+
             #endregion
 
-            #region Excercise 30
+            #region Excercise 30 √
             // Prompt the user to enter text. Reverse the text.
+
+            //string input = Console.ReadLine();
+
+            //for (int i = input.Length-1; i >= 0; i--)
+            //{
+            //    Console.Write(input[i]);
+            //}
             #endregion
 
-            #region Excercise 31
+            #region Excercise 31 √
             // Create an array of size 5 and fill it with the following numbers: 2, 8, 0, 24, 51. Prompt the user
             //to enter an index. Display the element in the array at that index.
 
-
-            //DO LAB 7
-
+            //int[] intArray = { 2, 8, 0, 24, 51 };
+            //Console.WriteLine("Pick a number from 1-5");
+            //int input = int.Parse(Console.ReadLine()) - 1;
+            //Console.WriteLine($"The number in that index of the array is {intArray[input]}");
             #endregion
 
-            #region Excercise 32
+            #region Excercise 32 √
             // Create an array of size 5 and fill it with the following numbers: 2, 8, 0, 24, 51. Prompt the user
             //to enter a number. If the number is in the array, display the index at which it is located
+
+            //int[] intArray = { 2, 8, 0, 24, 51 };
+            //Console.WriteLine("Pick a number");
+            //int input = int.Parse(Console.ReadLine());
+            //for (int i = 0; i < intArray.Length - 1; i++)
+            //{
+            //    if (intArray[i] == input)
+            //    {
+            //        Console.WriteLine($"The index {i} of the Array contains {input}");
+            //    }
+            //}
+
             #endregion
 
-            #region Excercise 33
+            #region Excercise 33 √
             // Create an array of size 5 and fill it with the following numbers: 2, 8, 0, 24, 51. Let the user
             //change the array by specifying an index and a replacement number.
+
+            //int[] intArray = { 2, 8, 0, 24, 51 };
+            //Console.WriteLine("Select and index from 0-4");
+            //int index = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Pick a number to replace the current number in that index");
+            //int replacement = int.Parse(Console.ReadLine());
+            //int original = intArray[index];
+
+            //intArray[index] = replacement;
+
+            //Console.WriteLine($"The old index of {index} was worth {original}, the new index of {index} is {intArray[index]}");
 
             #endregion
 
@@ -700,6 +867,8 @@ namespace Exercises
 
             #region Excercise 76
             // Determine whether a number is even or odd.
+
+
             #endregion
         }
     }
