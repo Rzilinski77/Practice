@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection.Emit;
 using System.Reflection.Metadata;
@@ -671,88 +672,236 @@ namespace Exercises
             //DO LAB 8
             #endregion
 
-            #region Excercise 36
-            //DO LAB 8
+            #region Excercise 36 √
+
 
             // Create two arrays, each of size 5. Fill the first array with the numbers: 12, 11, 10, 9, 8. Fill the
             //second array with the strings: "Drummers Drumming", "Pipers Piping", "Lords a-Leaping",
             //"Ladies Dancing", "Maids a-Milking".Combine both arrays to display a piece of the Christmas
             //song
+
+            //int[] days = { 12, 11, 10, 9, 8 };
+            //string[] gifts = { "Drummers Drumming", "Pipers Piping", "Lords a-Leaping", "Ladies Dancing", "Maids a-Milking" };
+
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    Console.WriteLine($"{days[i]} {gifts[i]}");
+            //}
             #endregion
 
-            #region Excercise 37
+            #region Excercise 37 √
             // Prompt the user to enter five numbers. Store these numbers in an array and output their
             //sum.
 
+            //Console.WriteLine("Enter in 5 numbers");
+            //int one = int.Parse(Console.ReadLine());
+            //int two = int.Parse(Console.ReadLine());
+            //int three = int.Parse(Console.ReadLine());
+            //int four = int.Parse(Console.ReadLine());
+            //int five = int.Parse(Console.ReadLine());
+            //Console.WriteLine();
+            //int[] intArray = { one, two, three, four, five };
+            //Console.WriteLine($"{intArray[0]},{intArray[1]},{intArray[2]},{intArray[3]},{intArray[4]}\n");
+            //int sum = 0;
+
+            //foreach (int num in intArray)
+            //{
+            //    sum += num;
+            //}
+
+            //Console.WriteLine($"The sum of your array is {sum}");
             #endregion
 
-            #region Excercise 38
+            #region Excercise 38 √
             // Prompt the user to enter five numbers. Store these numbers in an array and output their
             //average.
 
+            //Console.WriteLine("Enter in 5 numbers");
+            //int one = int.Parse(Console.ReadLine());
+            //int two = int.Parse(Console.ReadLine());
+            //int three = int.Parse(Console.ReadLine());
+            //int four = int.Parse(Console.ReadLine());
+            //int five = int.Parse(Console.ReadLine());
+            //Console.WriteLine();
+            //int[] intArray = { one, two, three, four, five };
+            //Console.WriteLine($"{intArray[0]},{intArray[1]},{intArray[2]},{intArray[3]},{intArray[4]}\n");
+            //int average = 0;
+            //foreach (int number in intArray)
+            //{
+            //    average += number;
+            //}
+            //average = average / 5;
+            //Console.WriteLine(average);
             #endregion
 
-            #region Excercise 39
+            #region Excercise 39 √
             // Prompt the user to enter five numbers. Store these numbers in an array and output them in
             //ascending order.
 
-            //DO LAB 9
+            //Console.WriteLine("Enter in 5 numbers");
+            //int one = int.Parse(Console.ReadLine());
+            //int two = int.Parse(Console.ReadLine());
+            //int three = int.Parse(Console.ReadLine());
+            //int four = int.Parse(Console.ReadLine());
+            //int five = int.Parse(Console.ReadLine());
+            //Console.WriteLine();
+            //int[] intArray = { one, two, three, four, five };
+            //Array.Sort(intArray);
+            //foreach (int number in intArray)
+            //{
+            //    Console.WriteLine(number);
+            //}
             #endregion
 
-            #region Excercise 40
+            #region Excercise 40 √
             // Prompt the user to enter five numbers. Store these numbers in an array and output the
             //median.
 
+            //Console.WriteLine("Enter in 5 numbers");
+            //int one = int.Parse(Console.ReadLine());
+            //int two = int.Parse(Console.ReadLine());
+            //int three = int.Parse(Console.ReadLine());
+            //int four = int.Parse(Console.ReadLine());
+            //int five = int.Parse(Console.ReadLine());
+            //Console.WriteLine();
+            //int[] intArray = { one, two, three, four, five };
+            //Array.Sort(intArray);
+            //Console.WriteLine($"The median of the array is {intArray[2]}");
             #endregion
 
-            #region Excercise 41
+            #region Excercise 41 √
             // Prompt the user to enter two numbers. Divide the two numbers and show only two decimal
             //places.
 
+            //Console.WriteLine("Enter in two numbers");
+            //double one = double.Parse(Console.ReadLine());
+            //double two = double.Parse(Console.ReadLine());
+
+            //double divide = one / two;
+
+            //divide = System.Math.Round(divide, 2);
+
+            //Console.WriteLine(divide);
             #endregion
 
-            #region Excercise 42
+            #region Excercise 42 √
             // Create a class called Point, that has two properties, X and Y. Let the user enter an X and Y value to create a Point object.
 
+
+
+            //Console.WriteLine("Enter in two degrees to make a point!");
+            //int point1 = int.Parse(Console.ReadLine());
+            //int point2 = int.Parse(Console.ReadLine());
+
+            //Point point = new Point(point1, point2);
+
+            //Console.WriteLine($"You created a new point ({point.x},{point.y})");
             #endregion
 
-            #region Excercise 43
+            #region Excercise 43 √
             // Enhance the point class in the previous exercise by adding a CalculateDistance method. The
             //distance method will calculate the distance of a point from the origin, (0, 0).
 
+            //Console.WriteLine("Enter in two degrees to make a point!");
+            //int point1 = int.Parse(Console.ReadLine());
+            //int point2 = int.Parse(Console.ReadLine());
+
+            //Point point = new Point(point1, point2);
+            //double distance = Point.CalculateDistance(point1, point2);
+
+            //Console.WriteLine($"You created a new point ({point.x},{point.y}), it has a distance of {distance}");
             #endregion
 
-            #region Excercise 44
-            // Enhance the point class in the previous exercise by adding a CalculateMidpoint method. The
+            #region Excercise 44 √
+            //Enhance the point class in the previous exercise by adding a CalculateMidpoint method. The
             //CalculateMidpoint will take as an argument another point and return the midpoint between
             //the current('this') object and the point passed in. Its method signature will look like: Point
             //CalculateMidpoint(Point other)
 
+            //Console.WriteLine("Enter in two degrees to make a point!");
+            //int point1 = int.Parse(Console.ReadLine());
+            //int point2 = int.Parse(Console.ReadLine());
+            //Point point = new Point(point1, point2);
+
+            //Point.CalculateMidpoint(point);
+
             #endregion
 
-            #region Excercise 45
+            #region Excercise 45 √
             // Create a class Square, that has one property, SideLength. The class should have two methods,
             //CalculatePerimeter, and CalculateArea. Let the user enter the length of the square's side.
             //Create an object based on that length and output details of the square.
 
+            //Console.WriteLine("enter in a length for a square");
+
+            //int length = int.Parse(Console.ReadLine());
+
+            //Square square = new Square(length);
+
+            //int perimeter = Square.CalculatePerimeter(length);
+            //int area = Square.CalculateArea(length);
+
+            //Console.WriteLine($"Your square has an length of {square.SideLength} It has a perimeter of {perimeter} and a area of {area}");
+
+
             #endregion
 
-            #region Excercise 46
+            #region Excercise 46 √
             // Create a class Triangle, that has three properties, Side1Length, Side2Length, Side3Length. The
             //class should have two methods, CalculatePerimeter, and CalculateArea.Let the user enter the
             //length of the triangle's sides. Create an object based on those lengths and output the
             //triangle's details. Hint: Google Heron's Formula.
 
+            //Console.WriteLine("give three lengths for the sides of a triangle");
+            //Triangle triangle = new Triangle(int.Parse(Console.ReadLine()), int.Parse(Console.ReadLine()), int.Parse(Console.ReadLine()));
+
+            //double perimeter = Triangle.CalculatePerimeter(triangle);
+            //double area = Triangle.CalculateArea(triangle);
+
+            //Console.WriteLine($"The perimeter of your triangle is {perimeter}, and the area of your triangle is {area}");
             #endregion
 
-            #region Excercise 47
+            #region Excercise 47 √
             // Prompt the user to enter a string. Store the string in a list and display the contents of the list with each element separated by a space.
+            //List<string> sentence = new List<string>();
 
+            //string more = "y";
+            //do
+            //{
+            //    Console.WriteLine("Enter a string");
+            //    sentence.Add(Console.ReadLine());
+            //    Console.WriteLine("Do you want to continue? (y/n)");
+            //    more = methods.YesOrNoValidation(Console.ReadLine());
+            //} while (more == "y");
+            //Console.WriteLine();
+            //foreach (string word in sentence)
+            //{
+            //    Console.Write($"{word} ");
+            //}
             #endregion
 
-            #region Excercise 48
+            #region Excercise 48 √
             // Prompt the user to enter as many numbers as she wants. Store these numbers in a list and
             //output their sum.
+
+            //List<int> numList = new List<int>();
+
+            //string more = "y";
+            //do
+            //{
+            //    Console.WriteLine("enter a number");
+            //    numList.Add(int.Parse(Console.ReadLine()));
+            //    Console.WriteLine("do you want to continue? (y/n)");
+            //    more = methods.YesOrNoValidation(Console.ReadLine());
+            //} while (more == "y");
+            //Console.WriteLine();
+            //int sum = 0;
+            //foreach (int num in numList)
+            //{
+            //    sum += num;
+            //}
+
+            //Console.WriteLine($"Your sum of numbers is {sum}");
 
             //DO LAB 10
 
